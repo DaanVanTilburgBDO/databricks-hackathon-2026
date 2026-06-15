@@ -11,6 +11,7 @@ import {
 } from '@databricks/appkit-ui/react';
 import { Menu } from 'lucide-react';
 import { DashboardPage } from './pages/DashboardPage';
+import { GeniePage } from './pages/GeniePage';
 import { RecordDetailPage } from './pages/RecordDetailPage';
 import { ReviewQueuePage } from './pages/ReviewQueuePage';
 
@@ -23,6 +24,7 @@ interface NavigationItem {
 const navigationItems: NavigationItem[] = [
   { label: 'Dashboard', to: '/', end: true },
   { label: 'Review Queue', to: '/queue' },
+  { label: 'Genie', to: '/genie' },
 ];
 
 function getDesktopNavClass(isActive: boolean): string {
@@ -137,6 +139,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <DashboardPage /> },
       { path: '/queue', element: <ReviewQueuePage /> },
+      { path: '/genie', element: <GeniePage /> },
       { path: '/record/:uniqueId', element: <RecordDetailPage /> },
     ],
   },
