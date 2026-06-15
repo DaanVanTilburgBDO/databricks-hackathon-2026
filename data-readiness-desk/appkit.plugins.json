@@ -309,7 +309,8 @@
           }
         ],
         "optional": []
-      }
+      },
+      "requiredByTemplate": true
     }
   },
   "scaffolding": {

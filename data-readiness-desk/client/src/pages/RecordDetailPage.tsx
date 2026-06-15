@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router';
+import { AiReviewPanel } from '../components/AiReviewPanel';
 import { sql } from '@databricks/appkit-ui/js';
 import {
   Badge,
@@ -457,6 +458,13 @@ export function RecordDetailPage() {
             )}
           </CardContent>
         </Card>
+
+        {resolvedUniqueId && (
+          <AiReviewPanel
+            uniqueId={resolvedUniqueId}
+            facility={facility as Record<string, unknown>}
+          />
+        )}
 
         <EvidenceSection title="Capabilities" items={capabilities} />
         <EvidenceSection title="Procedures" items={procedures} />
