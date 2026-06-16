@@ -8,6 +8,7 @@ const APP_CONFIG = {
   plugins: [
     'analytics',
     'lakebase',
+    'genie',
   ],
 } as const;
 
@@ -55,6 +56,7 @@ test('smoke test - app loads and displays home page', async ({ page }) => {
 
   await expect(page.getByRole('link', { name: 'Dashboard' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Review Queue' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Genie' })).toBeVisible();
 });
 
 for (const [name, plugin] of enabledPages) {

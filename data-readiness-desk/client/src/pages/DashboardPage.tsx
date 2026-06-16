@@ -264,7 +264,7 @@ export function DashboardPage() {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
+                    <TableRow className="bg-muted hover:bg-muted">
                       <TableHead>State</TableHead>
                       <TableHead className="text-right">Facilities</TableHead>
                       <TableHead className="text-right">Description %</TableHead>
