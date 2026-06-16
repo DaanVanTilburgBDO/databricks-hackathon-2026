@@ -537,7 +537,7 @@ export function RecordDetailPage() {
                   value={notes}
                   onChange={(event) => setNotes(event.target.value)}
                   placeholder="Add rationale, follow-up actions, or data quality observations."
-                  className="min-h-32 border-[#D8CDC0] bg-white"
+                  className="min-h-32 border-[#D8CDC0] bg-white text-gray-900 placeholder:text-gray-400"
                 />
               </div>
 
